@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Click the star as many times as you can in 30 seconds." />
+    <meta name="theme-color" content="#ff76bd" />
+    <title>Click here.exe</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <section class="stage">
+        <div class="blob blob-light" aria-hidden="true"></div>
+        <div class="blob blob-purple" aria-hidden="true"></div>
+
+        <div class="layout">
+          <header class="topbar">
+            <p class="topbar-title">Click here.exe</p>
+            <p class="topbar-tag">Glitter edition / 2000</p>
+          </header>
+
+          <div class="stats" aria-live="off">
+            <div class="stat">
+              <p class="stat-label">Score</p>
+              <p class="stat-value" id="score">00</p>
+            </div>
+            <div class="stat stat-bordered">
+              <p class="stat-label">Time</p>
+              <p class="stat-value" id="time">30s</p>
+            </div>
+            <div class="stat">
+              <p class="stat-label">Best</p>
+              <p class="stat-value" id="best">00</p>
+            </div>
+          </div>
+
+          <div class="arena" id="arena">
+            <div class="arena-grid" aria-hidden="true"></div>
+            <div class="arena-halo" aria-hidden="true"></div>
+
+            <button
+              type="button"
+              class="target"
+              id="target"
+              aria-label="Click target"
+              disabled
+            >
+              <span class="target-body">
+                <span class="star-shape" aria-hidden="true"></span>
+                <span class="star-content">
+                  <span class="sparkle target-sparkle" aria-hidden="true"></span>
+                  <span class="target-points">+1 point</span>
+                  Click here
+                </span>
+              </span>
+            </button>
+
+            <p class="arena-hint">Click as many times as you can</p>
+
+            <div class="overlay" id="overlay">
+              <div class="overlay-content">
+                <p class="overlay-kicker" id="overlay-kicker">30 second challenge</p>
+                <div class="overlay-title-row">
+                  <span class="sparkle sparkle-large result-only" aria-hidden="true"></span>
+                  <h1 class="y2k-title" id="overlay-title">Click here</h1>
+                  <span class="sparkle sparkle-large result-only" aria-hidden="true"></span>
+                </div>
+                <p class="overlay-result result-only" id="overlay-result" aria-live="polite"></p>
+                <button type="button" class="cta" id="start">Start clicking</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
